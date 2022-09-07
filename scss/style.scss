@@ -1,0 +1,728 @@
+@import url('http://fonts.cdnfonts.com/css/skoda-pro');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css');
+
+@import '../scss/var';
+@import '../scss/mixin';
+@import '../scss/vendor';
+
+html{
+    font-size: 62.5%;
+    text-transform: capitalize;
+    scroll-behavior: smooth;
+    font-family: 'Skoda Pro', sans-serif;
+}
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    border: 0; outline: 0;
+    list-style: none;
+    text-decoration: none;
+    line-height: 1.6;
+    background: none;
+    transition: .2s;
+}
+
+.loader-page{
+    width: 102.4rem; height: 100vh;
+    margin: auto;
+    @include flexCenter(center);
+    background: url(../images/background.png) no-repeat;
+    background-size: cover;
+    transition: opacity 1.5s, visibility 1s;
+    &.loader--hidden{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+.btn{
+    background: $primary;
+    border-radius: 4rem;
+    width: 30rem; height: 4.5rem;
+    margin-top: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    box-shadow: 1rem 1rem 4rem $primaryShadow;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar{
+    width: .5rem;
+    margin-right: 1rem;
+}
+::-webkit-scrollbar-track{
+    border-radius: 2rem;
+    background: $bg-light-color;
+    border: .1rem solid $light-color;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 2rem;
+    background: $primary;
+}
+
+
+
+
+
+//--------- Log in Page --------------//
+.loginContainer{
+    width: 102.4rem; height: 100vh;
+    margin: auto;
+    @include flexCenter(center);
+    background: url(../images/bg-login.png) no-repeat;
+    background-size: cover;
+    .logo{
+        width: 19rem; height: 80vh;
+        background: url(../images/background.png) no-repeat;
+        background-size: cover;
+        border-radius: 3rem 0 0 3rem;
+        @include flexCenter(center);
+        img{
+            width: 80%;
+        }
+    }
+    .loginBox{
+        width: 61rem; height: 80vh;
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 0 3rem 3rem 0;
+        @include flexCenter(center);
+        flex-direction: column;
+        gap: 2rem;
+        h2{
+            font-size: 3rem;
+            font-weight: bolder;
+            line-height: 1.5;
+            padding: 0 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: .2rem solid $txt-color;
+        }
+        .field{
+            position: relative;
+            input:focus ~ .floating-label, input:not(:focus):valid ~ .floating-label{
+                top: -0.8rem;
+                left: 2rem;
+                font-size: 1.6rem;
+                opacity: 1;
+                padding: 0 1rem 0 3.5rem;
+                background: #F4F4F4;
+            }
+            input:focus, input:not(:focus):valid{
+                border: .1rem solid $txt-light-color;
+            }
+            .inputText {
+                font-size: 1.6rem;
+                width: 30rem;
+                height: 4.5rem;
+                border-radius: 4rem;   
+                border: .1rem solid $light-color;
+                background: none;
+                padding: 0 2rem;
+            }
+            .floating-label {
+                position: absolute;
+                font-size: 1.6rem;
+                pointer-events: none;
+                padding-left: 3.5rem;
+                left: .5rem;
+                top: 1.3rem;
+                opacity: .6;
+                transition: 0.2s ease all;
+            }
+            #CompanyID{                
+                background: #F4F4F4 url(../images/iconfinder_Location.png) no-repeat;
+                background-position: 1rem top;
+            }
+            #UserID{                
+                background: #F4F4F4 url(../images/User_ID.png) no-repeat;
+                background-position: 1rem top;
+            }
+            #Password{                
+                background: #F4F4F4 url(../images/Password.png) no-repeat;
+                background-position: 1rem top;
+            }
+        }
+    }
+}
+
+.mainContainer{
+    position: relative;
+    width: 102.4rem; height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background: url(../images/bg-login.png) no-repeat;
+    background-size: cover;
+    header{
+        width: 100%;
+        padding-top: 3rem;
+        display: flex;
+        justify-content: space-between;
+        height: 7rem;
+        z-index: 999;
+        .topLeft{            
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            .bars{
+                width: 4.5rem; height: 4.5rem;
+                background: #fff;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding-left: 1rem;
+                gap: .4rem;
+                cursor: pointer;
+                span{
+                    width: 2.2rem; height: .4rem;
+                    border-radius: 1rem;
+                    background: $txt-color;
+                }
+                span:nth-child(2){
+                    width: 1.6rem;
+                }
+            }
+            .mainTitle{
+                @include flexCenter(center);
+                background: $primary;
+                height: 4rem;
+                padding: 0 2.5rem 0 .8rem;
+                border-radius: 0 4rem 4rem 0;
+                color: #fff;
+                font-size: 1.8rem;
+                font-weight: bolder;
+                gap: .85rem;
+            }
+        }        
+        .search{
+            @include flexCenter(flex-start);
+            background: rgba(255,255,255,0.8);
+            width: 40rem; height: 4rem;
+            border: .1rem solid $light-color;
+            border-radius: 4rem;
+            position: relative;
+            .allModel{
+                @include flexCenter(space-between);
+                width: 13rem; height: 4rem;
+                border-right: .1rem solid $light-color;
+                padding: 0 .8rem 0 1.5rem;
+                font-size: 1.6rem;
+                font-weight: bold;
+                cursor: pointer;
+                transition: .1s;
+                i{
+                    font-size: 2rem;
+                }
+                &.active{
+                    background: #fff;
+                    border-radius: 2rem 0 0 0;
+                    border: .1rem solid $light-color;
+                    border-bottom: none;
+                    z-index: 3;
+                }
+            }
+            .model-list{
+                position: absolute;
+                top: 3.8rem; left: 0;
+                background: #fff;
+                display: none;
+                padding-top: 1rem;
+                border: .1rem solid $light-color;
+                border-radius: 0 0 1rem 1rem;
+                box-shadow: 1rem 1rem 4rem rgba(0,0,0,0.48);
+                height: calc(100vh - 10rem);
+                overflow-y: scroll;
+                z-index: 1;
+                &.active{
+                    display: block;
+                }
+                li a{
+                    @include flexCenter(flex-start);
+                    flex-direction: row;
+                    padding: 1rem;
+                    gap: 1rem;
+                    .model-img{
+                        width: 10rem; height: 6rem;
+                        border-radius: .5rem;
+                        object-fit: cover;
+                        overflow: hidden;
+                        & > img{
+                            width: 100%; height: auto;
+                            object-fit: cover;
+                        }
+                    }
+                    span{
+                        font-size: 1.8rem;
+                        font-weight: bolder;
+                        color: $txt-color;
+                    }
+                    &:hover{
+                        background: $bg-light-color;
+                    }
+                }
+            }
+            .search-field{                
+                @include flexCenter(space-between);
+                width: calc(100% - 13rem);
+                padding: 0 1.5rem 0 .8rem;
+                font-size: 1.6rem;
+                font-weight: bold;
+                .search-btn{
+                    font-size: 2rem;
+                }
+            }
+        }
+        .top-right{
+            @include flexCenter(space-between);
+            gap: 1.5rem;
+            position: relative;
+            .skoda-logo img{
+                height: 1.6rem; width: auto;
+            }
+            .notification{
+                font-size: 2rem;
+                position: relative;
+                padding: 0 1.5rem;
+                cursor: pointer;
+                img{
+                    height: 1.7rem; width: auto;
+                }
+            }
+            .newNotifi{
+                position: absolute;
+                top: 4.5rem; right: 0;
+                width: 30rem;
+                background: #fff;
+                border-radius: .5rem;
+                box-shadow: 1rem 1rem 4rem rgba(0,0,0,0.4);
+                border: .1rem solid $light-color;
+                display: none;
+                &.active{
+                    display: block;
+                }
+                &::after{
+                    position: absolute;
+                    content: "";
+                    top: -.8rem; right: 1.5rem;
+                    width: 1.5rem; height: 1.5rem;
+                    border-radius: .3rem 0 0 0;
+                    transform: rotate(45deg);
+                    background: #fff;
+                    border-left: .1rem solid $light-color;
+                    border-top: .1rem solid $light-color;
+                }
+                li{
+                    padding: 1rem 1.5rem; 
+                    border-bottom: .1rem solid $light-color;
+                    cursor: pointer;
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                    h5{
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        line-height: 1.6;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    p{
+                        font-size: 1.3rem;
+                        font-weight: normal;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+    }
+    .navbar{
+        position: fixed;
+        width: 30rem; height: 100vh;
+        top: 0; left: -120%;
+        background: #fff;
+        box-shadow: 4rem 0 6rem rgba(0,0,0,0.48);
+        z-index: 9999;
+        &.active{
+            left: 0;
+            box-shadow: 0 0 0 100vw $transparent-color;
+        }
+        .userDetail{
+            background: url(../images/background.png) no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            padding: 1rem 1rem 1.2rem 2rem;
+            position: relative;
+            #close{
+                position: absolute;
+                top: 1rem; right: 1rem;
+                font-size: 2rem;
+                color: #fff;
+                cursor: pointer;
+            }
+            .ipAdd{
+                font-size: 1.4rem;
+                color: $txt-light-color;
+                font-weight: normal;
+                margin-bottom: 1.5rem;
+            }
+            h5{
+                font-size: 2rem;
+                font-weight: bolder;
+                text-transform: uppercase;
+                letter-spacing: .2rem;
+                color: #fff;
+            }
+            .userName{
+                font-size: 1.6rem;
+                color: $light-color;
+                font-weight: bold;
+                span{                    
+                font-size: 1.4rem;
+                font-weight: normal;
+                }
+            }
+        }
+        .links{
+            padding-top: 1rem;
+            li{
+                position: relative;
+                width: 100%;
+                border-bottom: .1rem solid $light-color;
+                    position: relative;
+                &:last-child{
+                    border-bottom: none;
+                }
+                a{
+                    display: flex;
+                    align-items: center;
+                    color: $txt-color;
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    padding: 1.2rem 0 1.2rem 5rem;
+                }
+                &:hover{
+                    padding-left: 1rem;
+                }
+            
+                &:nth-child(1){
+                    background: url(../images/DashBoard.png) no-repeat;
+                    background-position: 2rem 1.2rem;
+                    &:hover{
+                        background: rgba(163,172,178,0.15) url(../images/DashBoard-black.png) no-repeat;
+                        background-position: 3rem 1.2rem;
+                    }
+                }
+                &:nth-child(2){
+                    background: url(../images/Vehicle_Check_In.png) no-repeat;
+                    background-position: 2rem 1.2rem;
+                    &:hover{
+                        background: rgba(163,172,178,0.15) url(../images/Vehicle_Check_In-black.png) no-repeat;
+                        background-position: 3rem 1.2rem;
+                    }
+                }
+                &:nth-child(3){
+                    background: url(../images/Gate_Pass_Verification.png) no-repeat;
+                    background-position: 2rem 1.2rem;
+                    &:hover{
+                        background: rgba(163,172,178,0.15) url(../images/Gate_Pass_Verification-black.png) no-repeat;
+                        background-position: 3rem 1.2rem;
+                    }
+                }
+                &:nth-child(4){
+                    background: url(../images/Vehicle_Check_Out.png) no-repeat;
+                    background-position: 2rem 1.2rem;
+                    &:hover{
+                        background: rgba(163,172,178,0.15) url(../images/Vehicle_Check_Out-black.png) no-repeat;
+                        background-position: 3rem 1.2rem;
+                    }
+                }
+                &:nth-child(5){ 
+                    background: url(../images/Vehicle_Pick&Drop.png) no-repeat;
+                    background-position: 2rem 1.2rem;
+                    &:hover{
+                        background: rgba(163,172,178,0.15) url(../images/Vehicle_Pick&Drop-black.png) no-repeat;
+                        background-position: 3rem 1.2rem;
+                    }
+                }
+                &:nth-child(6){
+                    background: url(../images/Logout.png) no-repeat;
+                    background-position: 2rem 1.2rem;
+                    &:hover{
+                        background: rgba(163,172,178,0.15) url(../images/Logout-black.png) no-repeat;
+                        background-position: 3rem 1.2rem;
+                    }
+                } 
+                
+                &.sub-links{
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        content: "\f105";
+                        font: var(--fa-font-solid);
+                        font-size: 2rem;
+                        right: 1.5rem; top: 1.2rem;
+                        color: $txt-light-color;
+                        transition: .2s ease-in;
+                    }
+                    &:hover ul{                    
+                        display: block;
+                    }
+                    &:hover::after{
+                        transform: rotate(90deg);
+                    }
+                    ul{
+                        padding-left: 2.5rem;
+                        border-top: .1rem solid var(--light-color);
+                        display: none;
+                        & li:nth-child(1){
+                            background: url(../images/Appointment.png) no-repeat;
+                            background-position: 2rem 1.2rem;
+                            &:hover{
+                                background: rgba(163,172,178,0.15) url(../images/Appointment-black.png) no-repeat;
+                                background-position: 3rem 1.2rem;
+                            }
+                        }
+                        & li:nth-child(2){
+                            background: url(../images/Walk_In.png) no-repeat;
+                            background-position: 2rem 1.2rem;
+                            &:hover{
+                                background: rgba(163,172,178,0.15) url(../images/Walk_In-black.png) no-repeat;
+                                background-position: 3rem 1.2rem;
+                            }
+                        }
+                        & li:nth-child(3){
+                            background: url(../images/Road_Test.png) no-repeat;
+                            background-position: 2rem 1.2rem;
+                            &:hover{
+                                background: rgba(163,172,178,0.15) url(../images/Road_Test-black.png) no-repeat;
+                                background-position: 3rem 1.2rem;
+                            }
+                        }
+                        & li:nth-child(4){
+                            background: url(../images/Transfer.png) no-repeat;
+                            background-position: 2rem 1.2rem;
+                            &:hover{
+                                background: rgba(163,172,178,0.15) url(../images/Transfer-black.png) no-repeat;
+                                background-position: 3rem 1.2rem;
+                            }
+                        }
+                    }
+                }  
+            }
+        }
+    }
+    .top-points{
+        position: relative;
+        width: 100%; height: 5.2rem;
+        margin-top: 1.5rem;
+        li{
+            position: absolute;
+            width: 40%;
+            text-align: right;
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: #F5F6F6;
+            height: 5.2rem;
+            padding: 0 .5rem;
+            border-radius: 0 4rem 4rem 0;
+            box-shadow: 1rem 0 1rem rgba(0,0,0,0.15);
+            @include flexCenter(flex-end); 
+            &:nth-child(1){
+                z-index: 3;
+            }
+            &:nth-child(2){
+                left: calc(32% - 3rem);
+                z-index: 2;
+            }
+            &:nth-child(3){
+                left: calc(64% - 6rem);
+                z-index: 1;    
+            }
+            span{
+                width: 4rem; height: 4rem;
+                border-radius: 50%;
+                border: .2rem solid $light-color;
+                background: #fff;
+                color: $primary;
+                @include flexCenter(center);
+                margin-left: 1.5rem;
+            }
+        }
+    }
+    .all-appointment{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin: 1rem .5rem 0;
+        gap: 1rem;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        .appointment-list{
+            min-width: 30.2rem;
+            height: calc(100vh - 14rem);
+            border-radius: 1rem 1rem 0 0;
+            background: $bg-light-color;
+            .time-slot{
+                background: linear-gradient(#1A1918, #525150);
+                width: 100%; height: 4.5rem;
+                border-radius: 1rem 1rem 0 0;
+                color: #fff;
+                font-size: 1.6rem;
+                font-weight: bolder;
+                @include flexCenter(center);
+            }
+            ul {
+                height: calc(100vh - 14rem);
+                overflow-y: scroll;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+                padding: .8rem;
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+                .card{
+                    width: 100%;
+                    margin-bottom: 1rem;
+                    background: #fff;
+                    border-radius: .5rem; 
+                    box-shadow: 0 2rem 3rem rgba(0,0,0,0.15);
+                    cursor: pointer;
+                    h3{
+                        font-size: 1.6rem;
+                        font-weight: bolder;
+                        color: $txt-color;
+                        border-bottom: .3rem solid $light-color;
+                        padding: .6rem 1rem;
+                        span{
+                            float: right;
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            color: $txt-light-color;
+                        }
+                    }
+                    .card-content{
+                        @include flexCenter(flex-start);
+                        align-items: flex-start;
+                        padding: .6rem 1rem;
+                        gap: 1rem;
+                        .img-box{
+                            width: 12.6rem; height: 13rem;
+                            border-radius: .5rem;  
+                            overflow: hidden;
+                            position: relative;
+                            p{
+                                position: absolute;
+                                left: 0;bottom: 0;
+                                background: rgba(0,0,0,0.7);
+                                width: 100%;
+                                text-align: center;
+                                font-size: 1.6rem;
+                                font-weight: bold;
+                                padding: .5rem;
+                                color: #fff;
+                            }
+                        }
+                        .text-box p{
+                            font-size: 1.5rem;
+                            line-height: 1.4;
+                            font-weight: bold;
+                            color: $txt-color;  
+                            margin-bottom: 1rem; 
+                            &:last-child{
+                                margin-bottom: none; 
+                            }                         
+                            span{
+                                font-size: 1.4rem;
+                                color: $primary;
+                            }
+                        }
+                          
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+    }
+    .loader-page, .loginContainer, .mainContainer{
+        width: 100vw;
+        height: 100vh;
+    }
+    .loginContainer .logo{
+        width: 22rem;
+    }
+}
+
+@media (max-width:768px) {
+    .loginContainer{
+        flex-direction: column;
+        .logo{
+            width: 50rem;
+            height: 20rem;
+            border-radius: 3rem 3rem 0 0;
+            img{
+                width: auto; height: 80%;
+            }
+        }
+        .loginBox{
+            width: 50rem;
+            border-radius: 0 0 3rem 3rem;
+        }
+    }
+    .mainContainer header{
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        height: 12.5rem;
+        .search{
+            flex: 1 0 calc(100% - 2rem);
+            order: 1;
+            margin: 0 .8rem;
+        }
+    }    
+    
+}
+
+
+@media (max-width:460px) {
+    .loginContainer{
+        .logo, .loginBox{
+            width: 100vw;
+        }
+    }
+    .mainContainer .top-points li {
+        width: 75%;
+        &:nth-child(2) {
+            left: calc(17% - 3rem);
+        }
+        &:nth-child(3) {
+            left: calc(34% - 6rem);
+        }
+    }
+}
+
+
+@media (max-width:420px) {
+    .mainContainer header {
+        gap: 0.5rem;
+        height: 15.5rem;
+        .top-right {
+            width: 100%;
+        }
+    }
+  
+  }

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gate Controller App : Appointment</title>
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+<body>
+    <div class="mainContainer">
+        <header>
+            <div class="topLeft">
+                <div class="bars"><span></span><span></span><span></span></div>
+                <div class="mainTitle"> 
+                    <img src="images/date_range-24px.png" alt="">
+                    <span>Appointment - Check-In</span>
+                </div>
+            </div>
+            <div class="search">
+                <div class="allModel">
+                    All Model <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <ul class="model-list">
+                    <li><a href="#">
+                        <div class="model-img"><img src="images/front-left-side-47.jpg" alt=""></div>
+                        <span>Skoda Slavia</span>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="model-img"><img src="images/front-left-side-46.jpg" alt=""></div>
+                        <span>Skoda Kushaq</span>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="model-img"><img src="images/front-left-side-45.jpg" alt=""></div>
+                        <span>Skoda Octavia</span>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="model-img"><img src="images/front-left-side-44.jpg" alt=""></div>
+                        <span>Skoda Superb</span>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="model-img"><img src="images/front-left-side-43.jpg" alt=""></div>
+                        <span>Skoda Kodiaq</span>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="model-img"><img src="images/front-left-side-42.jpg" alt=""></div>
+                        <span>Skoda Fabia</span>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="model-img"><img src="images/front-left-side-41.jpg" alt=""></div>
+                        <span>Skoda Enyaq iV</span>
+                    </a></li>
+                </ul>
+
+                <div class="search-field">
+                    <input type="text" placeholder="Search..">
+                    <button class="search-btn"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="skoda-logo">
+                    <img src="images/skoda-txtLogo.png" alt="">
+                </div>
+                <div class="notification">
+                    <img src="images/new-Notification.png" alt="">
+                </div>
+                <ul class="newNotifi">
+                    <li>
+                        <h5>Lorem ipsum, dolor sit amet consectetur</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus molestiae, fugiat ratione, rem ullam illum optio aperiam accusamus distinctio id ad reiciendis quas odio quaerat expedita. Quo odio sit excepturi?</p>
+                    </li>
+                    <li>
+                        <h5>Lorem ipsum, dolor sit amet consectetur</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus molestiae, fugiat ratione, rem ullam illum optio aperiam accusamus distinctio id ad reiciendis quas odio quaerat expedita. Quo odio sit excepturi?</p>
+                    </li>
+                    <li>
+                        <h5>Lorem ipsum, dolor sit amet consectetur</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus molestiae, fugiat ratione, rem ullam illum optio aperiam accusamus distinctio id ad reiciendis quas odio quaerat expedita. Quo odio sit excepturi?</p>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <nav class="navbar">
+            <div class="userDetail">
+                <div id="close" class="fas fa-times"></div>
+                <div class="ipAdd">IP : 192.168.01.2</div>
+                <h5>Krishna auto sales</h5>
+                <div class="userName">Amit Kumar <br>
+                    <span>Operations Supervisor</span>
+                </div>
+            </div>
+            <ul class="links">
+                <li><a href="#">DashBoard</a></li>
+                <li class="sub-links"><a href="#">Vehicle Check In</a>
+                    <ul>
+                        <li><a href="#">Appointment</a></li>
+                        <li><a href="#">Walk In</a></li>
+                        <li><a href="#">Road Test</a></li>
+                        <li><a href="#">Transfer</a></li>
+                    </ul>
+                </li>
+                <li class="sub-links"><a href="#">Gate Pass Verification</a>
+                    <ul>
+                        <li><a href="#">Appointment</a></li>
+                        <li><a href="#">Walk In</a></li>
+                        <li><a href="#">Road Test</a></li>
+                        <li><a href="#">Transfer</a></li>
+                    </ul>
+                </li>
+                <li class="sub-links"><a href="#">Vehicle Check Out</a>
+                    <ul>
+                        <li><a href="#">Appointment</a></li>
+                        <li><a href="#">Walk In</a></li>
+                        <li><a href="#">Road Test</a></li>
+                        <li><a href="#">Transfer</a></li>
+                    </ul>
+                </li>
+                <li class="sub-links"><a href="#">Vehicle Pick & Drop</a>
+                    <ul>
+                        <li><a href="#">Appointment</a></li>
+                        <li><a href="#">Walk In</a></li>
+                        <li><a href="#">Road Test</a></li>
+                        <li><a href="#">Transfer</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+            <div class="close"><i class="fa fas-times"></i></div>
+        </nav>
+
+        <ul class="top-points">
+            <li>Appointment Today <span>5</span></li>
+            <li>Checked-In <span>12</span></li>
+            <li>Walk-In <span>130</span></li>
+        </ul>
+
+        <!------Card list Start------->
+
+        <div class="all-appointment">
+            <div class="appointment-list">
+                <div class="time-slot">8:00 AM</div>
+                <ul>
+                    <li class="card">
+                        <h3>Mr. Abhishek Kumar <span>8:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>RAPID</p>
+                            </div>
+                            <div class="text-box">
+                                <p>12-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    OR02BW-5188
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                -</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <h3>Mr. Gurvinder Singh <span>8:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>FABIA</p>
+                            </div>
+                            <div class="text-box">
+                                <p>11-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    CH01AF-2193
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                    Running Repair</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <h3>Mr. Nishant Deshmukh <span>8:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>SUPERB</p>
+                            </div>
+                            <div class="text-box">
+                                <p>25-Jan-2019</p>
+                                <p><span>Registration</span><br>
+                                    CH01BM-1553
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                    Paid Service</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <h3>Mr. Abhishek Kumar <span>8:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>RAPID</p>
+                            </div>
+                            <div class="text-box">
+                                <p>12-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    OR02BW-5188
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                -</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            
+            <div class="appointment-list">
+                <div class="time-slot">9:00 AM</div>
+                <ul>
+                    <li class="card">
+                        <h3>Mr. Abhishek Kumar <span>9:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>RAPID</p>
+                            </div>
+                            <div class="text-box">
+                                <p>12-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    OR02BW-5188
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                -</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <h3>Mr. Gurvinder Singh <span>9:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>FABIA</p>
+                            </div>
+                            <div class="text-box">
+                                <p>11-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    CH01AF-2193
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                    Running Repair</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <h3>Mr. Nishant Deshmukh <span>9:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>SUPERB</p>
+                            </div>
+                            <div class="text-box">
+                                <p>25-Jan-2019</p>
+                                <p><span>Registration</span><br>
+                                    CH01BM-1553
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                    Paid Service</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <h3>Mr. Abhishek Kumar <span>9:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>RAPID</p>
+                            </div>
+                            <div class="text-box">
+                                <p>12-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    OR02BW-5188
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                -</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            
+            <div class="appointment-list">
+                <div class="time-slot">10:00 AM</div>
+                <ul>
+                    <li class="card">
+                        <h3>Mr. Abhishek Kumar <span>10:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>RAPID</p>
+                            </div>
+                            <div class="text-box">
+                                <p>12-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    OR02BW-5188
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                -</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <h3>Mr. Gurvinder Singh <span>10:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>FABIA</p>
+                            </div>
+                            <div class="text-box">
+                                <p>11-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    CH01AF-2193
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                    Running Repair</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <h3>Mr. Nishant Deshmukh <span>10:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>SUPERB</p>
+                            </div>
+                            <div class="text-box">
+                                <p>25-Jan-2019</p>
+                                <p><span>Registration</span><br>
+                                    CH01BM-1553
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                    Paid Service</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <h3>Mr. Abhishek Kumar <span>10:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>RAPID</p>
+                            </div>
+                            <div class="text-box">
+                                <p>12-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    OR02BW-5188
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                -</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            
+            <div class="appointment-list">
+                <div class="time-slot">11:00 AM</div>
+                <ul>
+                    <li class="card">
+                        <h3>Mr. Abhishek Kumar <span>11:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>RAPID</p>
+                            </div>
+                            <div class="text-box">
+                                <p>12-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    OR02BW-5188
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                -</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <h3>Mr. Gurvinder Singh <span>11:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>FABIA</p>
+                            </div>
+                            <div class="text-box">
+                                <p>11-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    CH01AF-2193
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                    Running Repair</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <h3>Mr. Nishant Deshmukh <span>11:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>SUPERB</p>
+                            </div>
+                            <div class="text-box">
+                                <p>25-Jan-2019</p>
+                                <p><span>Registration</span><br>
+                                    CH01BM-1553
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                    Paid Service</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <h3>Mr. Abhishek Kumar <span>11:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>RAPID</p>
+                            </div>
+                            <div class="text-box">
+                                <p>12-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    OR02BW-5188
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                -</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            
+            <div class="appointment-list">
+                <div class="time-slot">12:00 AM</div>
+                <ul>
+                    <li class="card">
+                        <h3>Mr. Abhishek Kumar <span>12:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>RAPID</p>
+                            </div>
+                            <div class="text-box">
+                                <p>12-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    OR02BW-5188
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                -</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <h3>Mr. Gurvinder Singh <span>12:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>FABIA</p>
+                            </div>
+                            <div class="text-box">
+                                <p>11-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    CH01AF-2193
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                    Running Repair</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <h3>Mr. Nishant Deshmukh <span>12:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>SUPERB</p>
+                            </div>
+                            <div class="text-box">
+                                <p>25-Jan-2019</p>
+                                <p><span>Registration</span><br>
+                                    CH01BM-1553
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                    Paid Service</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <h3>Mr. Abhishek Kumar <span>12:00 AM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>RAPID</p>
+                            </div>
+                            <div class="text-box">
+                                <p>12-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    OR02BW-5188
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                -</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            
+            <div class="appointment-list">
+                <div class="time-slot">1:00 PM</div>
+                <ul>
+                    <li class="card">
+                        <h3>Mr. Abhishek Kumar <span>1:00 PM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>RAPID</p>
+                            </div>
+                            <div class="text-box">
+                                <p>12-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    OR02BW-5188
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                -</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <h3>Mr. Gurvinder Singh <span>1:00 PM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>FABIA</p>
+                            </div>
+                            <div class="text-box">
+                                <p>11-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    CH01AF-2193
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                    Running Repair</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <h3>Mr. Nishant Deshmukh <span>1:00 PM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>SUPERB</p>
+                            </div>
+                            <div class="text-box">
+                                <p>25-Jan-2019</p>
+                                <p><span>Registration</span><br>
+                                    CH01BM-1553
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                    Paid Service</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <h3>Mr. Abhishek Kumar <span>1:00 PM</span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>RAPID</p>
+                            </div>
+                            <div class="text-box">
+                                <p>12-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    OR02BW-5188
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                -</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

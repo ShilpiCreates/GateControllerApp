@@ -1,0 +1,767 @@
+@import url("http://fonts.cdnfonts.com/css/skoda-pro");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
+@import url("http://fonts.cdnfonts.com/css/skoda-pro");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
+html {
+  font-size: 62.5%;
+  text-transform: capitalize;
+  scroll-behavior: smooth;
+  font-family: "Skoda Pro", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  line-height: 1.6;
+  background: none;
+  transition: 0.2s;
+}
+
+.loader-page {
+  width: 102.4rem;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../images/background.png) no-repeat;
+  background-size: cover;
+  transition: opacity 1.5s, visibility 1s;
+}
+.loader-page.loader--hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.btn {
+  background: #48B143;
+  border-radius: 4rem;
+  width: 30rem;
+  height: 4.5rem;
+  margin-top: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  box-shadow: 1rem 1rem 4rem rgba(74, 168, 45, 0.4);
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  margin-right: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 2rem;
+  background: #F5F6F6;
+  border: 0.1rem solid #A3ACB2;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2rem;
+  background: #48B143;
+}
+
+.loginContainer {
+  width: 102.4rem;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../images/bg-login.png) no-repeat;
+  background-size: cover;
+}
+.loginContainer .logo {
+  width: 19rem;
+  height: 80vh;
+  background: url(../images/background.png) no-repeat;
+  background-size: cover;
+  border-radius: 3rem 0 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginContainer .logo img {
+  width: 80%;
+}
+.loginContainer .loginBox {
+  width: 61rem;
+  height: 80vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0 3rem 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.loginContainer .loginBox h2 {
+  font-size: 3rem;
+  font-weight: bolder;
+  line-height: 1.5;
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 0.2rem solid #1A1918;
+}
+.loginContainer .loginBox .field {
+  position: relative;
+}
+.loginContainer .loginBox .field input:focus ~ .floating-label, .loginContainer .loginBox .field input:not(:focus):valid ~ .floating-label {
+  top: -0.8rem;
+  left: 2rem;
+  font-size: 1.6rem;
+  opacity: 1;
+  padding: 0 1rem 0 3.5rem;
+  background: #F4F4F4;
+}
+.loginContainer .loginBox .field input:focus, .loginContainer .loginBox .field input:not(:focus):valid {
+  border: 0.1rem solid #6D6D6D;
+}
+.loginContainer .loginBox .field .inputText {
+  font-size: 1.6rem;
+  width: 30rem;
+  height: 4.5rem;
+  border-radius: 4rem;
+  border: 0.1rem solid #A3ACB2;
+  background: none;
+  padding: 0 2rem;
+}
+.loginContainer .loginBox .field .floating-label {
+  position: absolute;
+  font-size: 1.6rem;
+  pointer-events: none;
+  padding-left: 3.5rem;
+  left: 0.5rem;
+  top: 1.3rem;
+  opacity: 0.6;
+  transition: 0.2s ease all;
+}
+.loginContainer .loginBox .field #CompanyID {
+  background: #F4F4F4 url(../images/iconfinder_Location.png) no-repeat;
+  background-position: 1rem top;
+}
+.loginContainer .loginBox .field #UserID {
+  background: #F4F4F4 url(../images/User_ID.png) no-repeat;
+  background-position: 1rem top;
+}
+.loginContainer .loginBox .field #Password {
+  background: #F4F4F4 url(../images/Password.png) no-repeat;
+  background-position: 1rem top;
+}
+
+.mainContainer {
+  position: relative;
+  width: 102.4rem;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background: url(../images/bg-login.png) no-repeat;
+  background-size: cover;
+}
+.mainContainer header {
+  width: 100%;
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  height: 7rem;
+  z-index: 999;
+}
+.mainContainer header .topLeft {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mainContainer header .topLeft .bars {
+  width: 4.5rem;
+  height: 4.5rem;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 1rem;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+.mainContainer header .topLeft .bars span {
+  width: 2.2rem;
+  height: 0.4rem;
+  border-radius: 1rem;
+  background: #1A1918;
+}
+.mainContainer header .topLeft .bars span:nth-child(2) {
+  width: 1.6rem;
+}
+.mainContainer header .topLeft .mainTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #48B143;
+  height: 4rem;
+  padding: 0 2.5rem 0 0.8rem;
+  border-radius: 0 4rem 4rem 0;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  gap: 0.85rem;
+}
+.mainContainer header .search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgba(255, 255, 255, 0.8);
+  width: 40rem;
+  height: 4rem;
+  border: 0.1rem solid #A3ACB2;
+  border-radius: 4rem;
+  position: relative;
+}
+.mainContainer header .search .allModel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 13rem;
+  height: 4rem;
+  border-right: 0.1rem solid #A3ACB2;
+  padding: 0 0.8rem 0 1.5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.mainContainer header .search .allModel i {
+  font-size: 2rem;
+}
+.mainContainer header .search .allModel.active {
+  background: #fff;
+  border-radius: 2rem 0 0 0;
+  border: 0.1rem solid #A3ACB2;
+  border-bottom: none;
+  z-index: 3;
+}
+.mainContainer header .search .model-list {
+  position: absolute;
+  top: 3.8rem;
+  left: 0;
+  background: #fff;
+  display: none;
+  padding-top: 1rem;
+  border: 0.1rem solid #A3ACB2;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.48);
+  height: calc(100vh - 10rem);
+  overflow-y: scroll;
+  z-index: 1;
+}
+.mainContainer header .search .model-list.active {
+  display: block;
+}
+.mainContainer header .search .model-list li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  padding: 1rem;
+  gap: 1rem;
+}
+.mainContainer header .search .model-list li a .model-img {
+  width: 10rem;
+  height: 6rem;
+  border-radius: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+.mainContainer header .search .model-list li a .model-img > img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.mainContainer header .search .model-list li a span {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  color: #1A1918;
+}
+.mainContainer header .search .model-list li a:hover {
+  background: #F5F6F6;
+}
+.mainContainer header .search .search-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 13rem);
+  padding: 0 1.5rem 0 0.8rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.mainContainer header .search .search-field .search-btn {
+  font-size: 2rem;
+}
+.mainContainer header .top-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  position: relative;
+}
+.mainContainer header .top-right .skoda-logo img {
+  height: 1.6rem;
+  width: auto;
+}
+.mainContainer header .top-right .notification {
+  font-size: 2rem;
+  position: relative;
+  padding: 0 1.5rem;
+  cursor: pointer;
+}
+.mainContainer header .top-right .notification img {
+  height: 1.7rem;
+  width: auto;
+}
+.mainContainer header .top-right .newNotifi {
+  position: absolute;
+  top: 4.5rem;
+  right: 0;
+  width: 30rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.4);
+  border: 0.1rem solid #A3ACB2;
+  display: none;
+}
+.mainContainer header .top-right .newNotifi.active {
+  display: block;
+}
+.mainContainer header .top-right .newNotifi::after {
+  position: absolute;
+  content: "";
+  top: -0.8rem;
+  right: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.3rem 0 0 0;
+  transform: rotate(45deg);
+  background: #fff;
+  border-left: 0.1rem solid #A3ACB2;
+  border-top: 0.1rem solid #A3ACB2;
+}
+.mainContainer header .top-right .newNotifi li {
+  padding: 1rem 1.5rem;
+  border-bottom: 0.1rem solid #A3ACB2;
+  cursor: pointer;
+}
+.mainContainer header .top-right .newNotifi li:last-child {
+  border-bottom: none;
+}
+.mainContainer header .top-right .newNotifi li h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mainContainer header .top-right .newNotifi li p {
+  font-size: 1.3rem;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mainContainer .navbar {
+  position: fixed;
+  width: 30rem;
+  height: 100vh;
+  top: 0;
+  left: -120%;
+  background: #fff;
+  box-shadow: 4rem 0 6rem rgba(0, 0, 0, 0.48);
+  z-index: 9999;
+}
+.mainContainer .navbar.active {
+  left: 0;
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+}
+.mainContainer .navbar .userDetail {
+  background: url(../images/background.png) no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 1rem 1.2rem 2rem;
+  position: relative;
+}
+.mainContainer .navbar .userDetail #close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+.mainContainer .navbar .userDetail .ipAdd {
+  font-size: 1.4rem;
+  color: #6D6D6D;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+.mainContainer .navbar .userDetail h5 {
+  font-size: 2rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: #fff;
+}
+.mainContainer .navbar .userDetail .userName {
+  font-size: 1.6rem;
+  color: #A3ACB2;
+  font-weight: bold;
+}
+.mainContainer .navbar .userDetail .userName span {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+.mainContainer .navbar .links {
+  padding-top: 1rem;
+}
+.mainContainer .navbar .links li {
+  position: relative;
+  width: 100%;
+  border-bottom: 0.1rem solid #A3ACB2;
+  position: relative;
+}
+.mainContainer .navbar .links li:last-child {
+  border-bottom: none;
+}
+.mainContainer .navbar .links li a {
+  display: flex;
+  align-items: center;
+  color: #1A1918;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 1.2rem 0 1.2rem 5rem;
+}
+.mainContainer .navbar .links li:hover {
+  padding-left: 1rem;
+}
+.mainContainer .navbar .links li:nth-child(1) {
+  background: url(../images/DashBoard.png) no-repeat;
+  background-position: 2rem 1.2rem;
+}
+.mainContainer .navbar .links li:nth-child(1):hover {
+  background: rgba(163, 172, 178, 0.15) url(../images/DashBoard-black.png) no-repeat;
+  background-position: 3rem 1.2rem;
+}
+.mainContainer .navbar .links li:nth-child(2) {
+  background: url(../images/Vehicle_Check_In.png) no-repeat;
+  background-position: 2rem 1.2rem;
+}
+.mainContainer .navbar .links li:nth-child(2):hover {
+  background: rgba(163, 172, 178, 0.15) url(../images/Vehicle_Check_In-black.png) no-repeat;
+  background-position: 3rem 1.2rem;
+}
+.mainContainer .navbar .links li:nth-child(3) {
+  background: url(../images/Gate_Pass_Verification.png) no-repeat;
+  background-position: 2rem 1.2rem;
+}
+.mainContainer .navbar .links li:nth-child(3):hover {
+  background: rgba(163, 172, 178, 0.15) url(../images/Gate_Pass_Verification-black.png) no-repeat;
+  background-position: 3rem 1.2rem;
+}
+.mainContainer .navbar .links li:nth-child(4) {
+  background: url(../images/Vehicle_Check_Out.png) no-repeat;
+  background-position: 2rem 1.2rem;
+}
+.mainContainer .navbar .links li:nth-child(4):hover {
+  background: rgba(163, 172, 178, 0.15) url(../images/Vehicle_Check_Out-black.png) no-repeat;
+  background-position: 3rem 1.2rem;
+}
+.mainContainer .navbar .links li:nth-child(5) {
+  background: url(../images/Vehicle_Pick&Drop.png) no-repeat;
+  background-position: 2rem 1.2rem;
+}
+.mainContainer .navbar .links li:nth-child(5):hover {
+  background: rgba(163, 172, 178, 0.15) url(../images/Vehicle_Pick&Drop-black.png) no-repeat;
+  background-position: 3rem 1.2rem;
+}
+.mainContainer .navbar .links li:nth-child(6) {
+  background: url(../images/Logout.png) no-repeat;
+  background-position: 2rem 1.2rem;
+}
+.mainContainer .navbar .links li:nth-child(6):hover {
+  background: rgba(163, 172, 178, 0.15) url(../images/Logout-black.png) no-repeat;
+  background-position: 3rem 1.2rem;
+}
+.mainContainer .navbar .links li.sub-links {
+  position: relative;
+}
+.mainContainer .navbar .links li.sub-links::after {
+  position: absolute;
+  content: "\f105";
+  font: var(--fa-font-solid);
+  font-size: 2rem;
+  right: 1.5rem;
+  top: 1.2rem;
+  color: #6D6D6D;
+  transition: 0.2s ease-in;
+}
+.mainContainer .navbar .links li.sub-links:hover ul {
+  display: block;
+}
+.mainContainer .navbar .links li.sub-links:hover::after {
+  transform: rotate(90deg);
+}
+.mainContainer .navbar .links li.sub-links ul {
+  padding-left: 2.5rem;
+  border-top: 0.1rem solid var(--light-color);
+  display: none;
+}
+.mainContainer .navbar .links li.sub-links ul li:nth-child(1) {
+  background: url(../images/Appointment.png) no-repeat;
+  background-position: 2rem 1.2rem;
+}
+.mainContainer .navbar .links li.sub-links ul li:nth-child(1):hover {
+  background: rgba(163, 172, 178, 0.15) url(../images/Appointment-black.png) no-repeat;
+  background-position: 3rem 1.2rem;
+}
+.mainContainer .navbar .links li.sub-links ul li:nth-child(2) {
+  background: url(../images/Walk_In.png) no-repeat;
+  background-position: 2rem 1.2rem;
+}
+.mainContainer .navbar .links li.sub-links ul li:nth-child(2):hover {
+  background: rgba(163, 172, 178, 0.15) url(../images/Walk_In-black.png) no-repeat;
+  background-position: 3rem 1.2rem;
+}
+.mainContainer .navbar .links li.sub-links ul li:nth-child(3) {
+  background: url(../images/Road_Test.png) no-repeat;
+  background-position: 2rem 1.2rem;
+}
+.mainContainer .navbar .links li.sub-links ul li:nth-child(3):hover {
+  background: rgba(163, 172, 178, 0.15) url(../images/Road_Test-black.png) no-repeat;
+  background-position: 3rem 1.2rem;
+}
+.mainContainer .navbar .links li.sub-links ul li:nth-child(4) {
+  background: url(../images/Transfer.png) no-repeat;
+  background-position: 2rem 1.2rem;
+}
+.mainContainer .navbar .links li.sub-links ul li:nth-child(4):hover {
+  background: rgba(163, 172, 178, 0.15) url(../images/Transfer-black.png) no-repeat;
+  background-position: 3rem 1.2rem;
+}
+.mainContainer .top-points {
+  position: relative;
+  width: 100%;
+  height: 5.2rem;
+  margin-top: 1.5rem;
+}
+.mainContainer .top-points li {
+  position: absolute;
+  width: 40%;
+  text-align: right;
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: #F5F6F6;
+  height: 5.2rem;
+  padding: 0 0.5rem;
+  border-radius: 0 4rem 4rem 0;
+  box-shadow: 1rem 0 1rem rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.mainContainer .top-points li:nth-child(1) {
+  z-index: 3;
+}
+.mainContainer .top-points li:nth-child(2) {
+  left: calc(32% - 3rem);
+  z-index: 2;
+}
+.mainContainer .top-points li:nth-child(3) {
+  left: calc(64% - 6rem);
+  z-index: 1;
+}
+.mainContainer .top-points li span {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 0.2rem solid #A3ACB2;
+  background: #fff;
+  color: #48B143;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1.5rem;
+}
+.mainContainer .all-appointment {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin: 1rem 0.5rem 0;
+  gap: 1rem;
+}
+.mainContainer .all-appointment::-webkit-scrollbar {
+  display: none;
+}
+.mainContainer .all-appointment .appointment-list {
+  min-width: 30.2rem;
+  height: calc(100vh - 14rem);
+  border-radius: 1rem 1rem 0 0;
+  background: #F5F6F6;
+}
+.mainContainer .all-appointment .appointment-list .time-slot {
+  background: linear-gradient(#1A1918, #525150);
+  width: 100%;
+  height: 4.5rem;
+  border-radius: 1rem 1rem 0 0;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainContainer .all-appointment .appointment-list ul {
+  height: calc(100vh - 14rem);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0.8rem;
+}
+.mainContainer .all-appointment .appointment-list ul::-webkit-scrollbar {
+  display: none;
+}
+.mainContainer .all-appointment .appointment-list ul .card {
+  width: 100%;
+  margin-bottom: 1rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.mainContainer .all-appointment .appointment-list ul .card h3 {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  color: #1A1918;
+  border-bottom: 0.3rem solid #A3ACB2;
+  padding: 0.6rem 1rem;
+}
+.mainContainer .all-appointment .appointment-list ul .card h3 span {
+  float: right;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #6D6D6D;
+}
+.mainContainer .all-appointment .appointment-list ul .card .card-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0.6rem 1rem;
+  gap: 1rem;
+}
+.mainContainer .all-appointment .appointment-list ul .card .card-content .img-box {
+  width: 12.6rem;
+  height: 13rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+.mainContainer .all-appointment .appointment-list ul .card .card-content .img-box p {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  color: #fff;
+}
+.mainContainer .all-appointment .appointment-list ul .card .card-content .text-box p {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: bold;
+  color: #1A1918;
+  margin-bottom: 1rem;
+}
+.mainContainer .all-appointment .appointment-list ul .card .card-content .text-box p:last-child {
+  margin-bottom: none;
+}
+.mainContainer .all-appointment .appointment-list ul .card .card-content .text-box p span {
+  font-size: 1.4rem;
+  color: #48B143;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .loader-page, .loginContainer, .mainContainer {
+    width: 100vw;
+    height: 100vh;
+  }
+  .loginContainer .logo {
+    width: 22rem;
+  }
+}
+@media (max-width: 768px) {
+  .loginContainer {
+    flex-direction: column;
+  }
+  .loginContainer .logo {
+    width: 50rem;
+    height: 20rem;
+    border-radius: 3rem 3rem 0 0;
+  }
+  .loginContainer .logo img {
+    width: auto;
+    height: 80%;
+  }
+  .loginContainer .loginBox {
+    width: 50rem;
+    border-radius: 0 0 3rem 3rem;
+  }
+  .mainContainer header {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    height: 12.5rem;
+  }
+  .mainContainer header .search {
+    flex: 1 0 calc(100% - 2rem);
+    order: 1;
+    margin: 0 0.8rem;
+  }
+}
+@media (max-width: 460px) {
+  .loginContainer .logo, .loginContainer .loginBox {
+    width: 100vw;
+  }
+  .mainContainer .top-points li {
+    width: 75%;
+  }
+  .mainContainer .top-points li:nth-child(2) {
+    left: calc(17% - 3rem);
+  }
+  .mainContainer .top-points li:nth-child(3) {
+    left: calc(34% - 6rem);
+  }
+}
+@media (max-width: 420px) {
+  .mainContainer header {
+    gap: 0.5rem;
+    height: 15.5rem;
+  }
+  .mainContainer header .top-right {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

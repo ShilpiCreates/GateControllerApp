@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gate Controller App</title>
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+<body>
+    <div class="loader-page">
+        <div class="logo">
+            <img src="images/Skoda-Logo.png" alt="Skoda Logo">
+        </div>
+    </div>
+
+    <div class="loginContainer">
+        <div class="logo">
+            <img src="images/Skoda-Logo.png" alt="Skoda Logo">
+        </div>
+        <div class="loginBox">
+            <h2>Log In</h2>
+            <div class="field">
+                <input type="password" class="inputText" required/>
+                <span class="floating-label" id="CompanyID">Company ID</span>
+            </div>
+            <div class="field">
+                <input type="text" class="inputText" required/>
+                <span class="floating-label" id="UserID">User ID</span>
+            </div>
+            <div class="field">
+                <input type="password" class="inputText" required/>
+                <span class="floating-label" id="Password">Password</span>
+            </div>
+            <button class="btn" onclick="window.location.href = 'appointment.html';">Login</button>
+        </div>
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
