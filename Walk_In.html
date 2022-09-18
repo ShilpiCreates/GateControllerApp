@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gate Controller App : Appointment</title>
+    <title>Gate Controller App : Walk In</title>
     <link rel="stylesheet" href="scss/style.css">
 </head>
 <body>
@@ -13,8 +13,8 @@
             <div class="topLeft">
                 <div class="bars"><span></span><span></span><span></span></div>
                 <div class="mainTitle"> 
-                    <img src="images/date_range-24px.png" alt="">
-                    <span>Appointment - Check-In</span>
+                    <img src="images/Walk_In-white.png" alt="">
+                    <span>Walk In</span>
                 </div>
             </div>
             <div class="search">
@@ -128,11 +128,6 @@
             <div class="close"><i class="fa fas-times"></i></div>
         </nav>
 
-        <ul class="top-points">
-            <li>Appointment Today <span>5</span></li>
-            <li>Checked-In <span>12</span></li>
-            <li>Walk-In <span>130</span></li>
-        </ul>
 
         <!------Card list Start------->
 
@@ -587,10 +582,22 @@
             </div>
         </div>
 
+        <!----------------- Error Page to Click Search ----------------->
+        <div class="error-container">
+            <img src="images/error.png" alt="">
+            <h2>Uh oh!</h2>
+            <p>Something went wrong.</p>
+    
+            <div class="button-box">
+                <button class="btn-line">CANCEL</button>
+                <button class="btn">Retry</button>
+            </div>
+        </div>
+
         <!----------------- Popup Page to Click Cards ----------------->
         <div class="main-popup">
             <div class="close"><i class="fas fa-times"></i></div>
-            <h2 class="popup-titel"><img src="images/Appointment-Check-In.png" alt=""> Appointment – check-In</h2>
+            <h2 class="popup-titel"><img src="images/Walk_In-white.png" alt=""> Walk In</h2>
 
             <div class="containt">
                 <div class="primery-detail">
@@ -608,7 +615,7 @@
                                 <li>Registration</li>
                                 <li>PBO8DS-4564</li>
                             </ul>
-                        </li>                 
+                        </li>             
                     </ul>
                     <ul>
                         <li>
@@ -643,8 +650,7 @@
                     </div>
                     <div class="field deactive">
                         <label for="Scan_Dangler">Scan Dangler</label>
-                        <input type="text" class="inputText" disabled placeholder="Click Icon to Scan Dangler" value="-"/>
-                        <span class="scaner-img"><img src="images/bar-code1.png" alt=""></span>
+                        <input type="text" class="inputText scaner-img" disabled placeholder="Click Icon to Scan Dangler" value="-"/>
                         <span class="alert-info">Feature not available.</span>
                     </div>
                     <hr/>

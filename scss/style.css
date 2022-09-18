@@ -1,4 +1,3 @@
-@import url("http://fonts.cdnfonts.com/css/skoda-pro");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
 @import url("http://fonts.cdnfonts.com/css/skoda-pro");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
@@ -22,6 +21,11 @@ html {
   transition: 0.2s;
 }
 
+.h16 {
+  height: 1.6rem;
+  clear: both;
+}
+
 .loader-page {
   width: 102.4rem;
   height: 100vh;
@@ -38,18 +42,44 @@ html {
   opacity: 0;
 }
 
-.btn {
-  background: #48B143;
+.button-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 1rem auto 1rem;
+  gap: 1rem;
+}
+
+.btn, .btn-line {
   border-radius: 4rem;
   width: 30rem;
   height: 4.5rem;
   margin-top: 2rem;
-  color: #fff;
   text-transform: uppercase;
   font-size: 1.6rem;
   font-weight: bolder;
-  box-shadow: 1rem 1rem 4rem rgba(74, 168, 45, 0.4);
   cursor: pointer;
+}
+
+.btn {
+  background: #48B143;
+  color: #fff;
+  box-shadow: 1rem 1rem 4rem rgba(74, 168, 45, 0.4);
+}
+
+.btn-line {
+  border: 0.2rem solid #48B143;
+  color: #48B143;
+  background: none;
+}
+
+hr {
+  width: 100%;
+  height: 0.1rem;
+  background: #A3ACB2;
+  margin: 2rem 0 1rem;
 }
 
 ::-webkit-scrollbar {
@@ -66,6 +96,16 @@ html {
 ::-webkit-scrollbar-thumb {
   border-radius: 2rem;
   background: #48B143;
+}
+
+.bottomGrayText {
+  width: 100%;
+  background: #F5F6F6;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 5rem;
+  padding: 0.5rem;
 }
 
 .loginContainer {
@@ -154,6 +194,84 @@ html {
 .loginContainer .loginBox .field #Password {
   background: #F4F4F4 url(../images/Password.png) no-repeat;
   background-position: 1rem top;
+}
+
+.VehicleCard_list {
+  height: calc(100vh - 14rem);
+  min-width: 30.2rem;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0.8rem;
+}
+.VehicleCard_list::-webkit-scrollbar {
+  display: none;
+}
+.VehicleCard_list .card {
+  width: 100%;
+  margin-bottom: 1rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.VehicleCard_list .card h3 {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  color: #1A1918;
+  border-bottom: 0.3rem solid #A3ACB2;
+  padding: 0.6rem 1rem;
+}
+.VehicleCard_list .card h3 span {
+  float: right;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #6D6D6D;
+  margin-left: 0.5rem;
+}
+.VehicleCard_list .card h3 span i {
+  color: #E6E615;
+}
+.VehicleCard_list .card .card-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0.6rem 1rem;
+  gap: 1rem;
+}
+.VehicleCard_list .card .card-content .img-box {
+  width: 12.6rem;
+  height: 13rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+.VehicleCard_list .card .card-content .img-box p {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  color: #fff;
+}
+.VehicleCard_list .card .card-content .text-box p {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: bold;
+  color: #1A1918;
+  margin-bottom: 1rem;
+}
+.VehicleCard_list .card .card-content .text-box p:last-child {
+  margin-bottom: none;
+}
+.VehicleCard_list .card .card-content .text-box p span {
+  font-size: 1.4rem;
+  color: #48B143;
 }
 
 .mainContainer {
@@ -304,6 +422,7 @@ html {
 }
 .mainContainer header .search .search-field .search-btn {
   font-size: 2rem;
+  cursor: pointer;
 }
 .mainContainer header .top-right {
   display: flex;
@@ -611,13 +730,13 @@ html {
 .mainContainer .all-appointment::-webkit-scrollbar {
   display: none;
 }
-.mainContainer .all-appointment .appointment-list {
+.mainContainer .all-appointment .appointment-slot {
   min-width: 30.2rem;
   height: calc(100vh - 14rem);
   border-radius: 1rem 1rem 0 0;
   background: #F5F6F6;
 }
-.mainContainer .all-appointment .appointment-list .time-slot {
+.mainContainer .all-appointment .appointment-slot .time-slot {
   background: linear-gradient(#1A1918, #525150);
   width: 100%;
   height: 4.5rem;
@@ -629,89 +748,654 @@ html {
   align-items: center;
   justify-content: center;
 }
-.mainContainer .all-appointment .appointment-list ul {
-  height: calc(100vh - 14rem);
-  overflow-y: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding: 0.8rem;
-}
-.mainContainer .all-appointment .appointment-list ul::-webkit-scrollbar {
+.mainContainer .error-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
   display: none;
-}
-.mainContainer .all-appointment .appointment-list ul .card {
-  width: 100%;
-  margin-bottom: 1rem;
   background: #fff;
-  border-radius: 0.5rem;
-  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.15);
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.7);
+  z-index: 99999;
+}
+.mainContainer .error-container.active {
+  display: flex;
+}
+.mainContainer .error-container h2 {
+  font-size: 2.4rem;
+  font-weight: bolder;
+  color: #48B143;
+}
+.mainContainer .error-container p {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.mainContainer .error-container .button-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem auto 1rem;
+  gap: 2rem;
+}
+.mainContainer .error-container .button-box .btn, .mainContainer .error-container .button-box .btn-line {
+  width: 15rem;
+  padding: 0 3rem;
+}
+.mainContainer .main-popup {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 80%;
+  max-height: 95vh;
+  display: none;
+  background: #fff;
+  border-radius: 2rem 2rem 0 0;
+  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+.mainContainer .main-popup.active {
+  z-index: 99999;
+  display: block;
+}
+.mainContainer .main-popup .close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #F5F6F6;
+  font-size: 1.4rem;
+  color: #1A1918;
   cursor: pointer;
 }
-.mainContainer .all-appointment .appointment-list ul .card h3 {
-  font-size: 1.6rem;
+.mainContainer .main-popup .popup-titel {
+  position: relative;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  display: inline-flex;
+  gap: 0.8rem;
+  left: -1.5rem;
+  margin-top: 3rem;
+  background: #48B143;
+  border-radius: 0 4rem 4rem 0;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+  padding: 0 2rem 0 2rem;
+  color: #fff;
+  font-size: 1.8rem;
   font-weight: bolder;
-  color: #1A1918;
-  border-bottom: 0.3rem solid #A3ACB2;
-  padding: 0.6rem 1rem;
 }
-.mainContainer .all-appointment .appointment-list ul .card h3 span {
+.mainContainer .main-popup::before {
+  position: absolute;
+  top: 1.4rem;
+  left: -0.9rem;
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  background: #317A1B;
+  transform: rotate(45deg);
+  z-index: -2;
+}
+.mainContainer .main-popup::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  border-radius: 2rem 0 0 0;
+  background: #fff;
+  z-index: -1;
+}
+.mainContainer .main-popup .companyLogo {
+  margin-right: 7rem;
+  margin-top: 3rem;
+  height: 4.5rem;
   float: right;
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #6D6D6D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.mainContainer .all-appointment .appointment-list ul .card .card-content {
+.mainContainer .main-popup .containt {
+  position: relative;
+  margin: 0 auto;
+  padding: 2.8rem 0 1.6rem;
+}
+.mainContainer .main-popup .containt::-webkit-scrollbar {
+  display: none;
+}
+.mainContainer .main-popup .containt:has(.bottomGrayText) {
+  padding-bottom: 0;
+}
+.mainContainer .main-popup .containt .primery-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto 1.5rem;
+  gap: 2rem;
+}
+.mainContainer .main-popup .containt .primery-detail ul {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainContainer .main-popup .containt .primery-detail ul li {
+  font-size: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.mainContainer .main-popup .containt .primery-detail ul li > ul {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 0.6rem 1rem;
-  gap: 1rem;
+  border-bottom: 0.1rem solid #F5F6F6;
 }
-.mainContainer .all-appointment .appointment-list ul .card .card-content .img-box {
-  width: 12.6rem;
-  height: 13rem;
-  border-radius: 0.5rem;
-  overflow: hidden;
+.mainContainer .main-popup .containt .primery-detail ul li > ul li {
+  width: 50%;
+  border: none;
+}
+.mainContainer .main-popup .containt .primery-detail ul li:nth-child(2) {
+  font-weight: bolder;
+  margin-right: 0;
+}
+.mainContainer .main-popup .containt .primery-detail ul li span {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-bottom: 0.1rem solid #F5F6F6;
+}
+.mainContainer .main-popup .containt .gray-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  min-width: 500px;
+  overflow-x: scroll;
+  margin: 2rem auto 1.5rem;
+  gap: 1rem;
+  background: #F5F6F6;
+  box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.15);
+  border-radius: 2rem;
+  padding: 1.5rem;
+}
+.mainContainer .main-popup .containt .gray-field::-webkit-scrollbar {
+  display: none;
+}
+.mainContainer .main-popup .containt .gray-field .field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   position: relative;
 }
-.mainContainer .all-appointment .appointment-list ul .card .card-content .img-box p {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+.mainContainer .main-popup .containt .gray-field .brouse-img-list {
   width: 100%;
-  text-align: center;
-  font-size: 1.6rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 1rem;
+}
+.mainContainer .main-popup .containt .gray-field .brouse-img-list .box-img {
+  width: 12rem;
+  height: 8rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.mainContainer .main-popup .containt .gray-field .brouse-img-list .box-img .img-store {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.mainContainer .main-popup .containt .gray-field .brouse-img-list .box-img .img-store img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.mainContainer .main-popup .containt .gray-field p {
+  width: 100%;
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+.mainContainer label {
+  display: inline;
+  width: 20rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  padding: 0.5rem;
+}
+.mainContainer .inputText {
+  font-size: 1.6rem;
+  width: 30rem;
+  height: 4.5rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #A3ACB2;
+  background: none;
+  position: relative;
+  padding: 0 1.5rem;
+}
+.mainContainer .alert-info {
+  position: absolute;
+  width: 30rem;
+  right: 0;
+  bottom: -2.5rem;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+.mainContainer.deactive {
+  opacity: 0.5;
+  cursor: none;
+}
+.mainContainer .scaner-img {
+  position: absolute;
+  right: 1rem;
+  top: 1.3rem;
+  cursor: pointer;
+}
+.mainContainer .scaner-img1 {
+  position: absolute;
+  right: 1rem;
+  top: 0.3rem;
+  cursor: pointer;
+}
+.mainContainer .field:has(.scaner-img) {
+  position: relative;
+}
+.mainContainer .container_body {
+  width: 100%;
+  margin-top: 1.5rem;
+  height: calc(100vh - 8rem);
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1.5rem;
+  overflow-y: scroll;
+}
+.mainContainer .container_body::-webkit-scrollbar {
+  display: none;
+}
+.mainContainer .container_body:has(.VehicleCard_list) {
+  display: flex;
+}
+.mainContainer .container_body .card_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.mainContainer .container_body .card_container .dash_card {
+  position: relative;
+  background: url(../images/Dashboard_card-bg.png) no-repeat;
+  background-size: cover;
+  height: 9rem;
+  flex-basis: calc(25% - 1.5rem);
+  padding: 1rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+.mainContainer .container_body .card_container .dash_card p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 1.6rem;
+  font-weight: bolder;
   color: #fff;
 }
-.mainContainer .all-appointment .appointment-list ul .card .card-content .text-box p {
-  font-size: 1.5rem;
-  line-height: 1.4;
-  font-weight: bold;
+.mainContainer .container_body .card_container .dash_card .graph {
+  position: absolute;
+  left: 1rem;
+  bottom: 0.5rem;
+}
+.mainContainer .container_body .card_container .dash_card .graph_Value {
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+  min-width: 4.5rem;
+  font-size: 2rem;
+  padding: 0 1rem;
+  font-weight: bolder;
   color: #1A1918;
-  margin-bottom: 1rem;
+  background: #fff;
+  border: 0.2rem solid #F5F6F6;
+  border-radius: 3rem 0.5rem 0.5rem 3rem;
 }
-.mainContainer .all-appointment .appointment-list ul .card .card-content .text-box p:last-child {
-  margin-bottom: none;
+.mainContainer .container_body table, .mainContainer .container_body .list_container {
+  width: 100%;
+  min-width: 600px;
+  margin-top: 1.5rem;
+  border-collapse: separate;
+  border-spacing: 0 0.2rem;
+  display: table;
+  overflow-x: scroll;
 }
-.mainContainer .all-appointment .appointment-list ul .card .card-content .text-box p span {
-  font-size: 1.4rem;
-  color: #48B143;
+.mainContainer .container_body table tr, .mainContainer .container_body .list_container tr {
+  cursor: pointer;
+}
+.mainContainer .container_body table tr th, .mainContainer .container_body table tr td, .mainContainer .container_body .list_container tr th, .mainContainer .container_body .list_container tr td {
+  text-align: left;
+  font-size: 1.6rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mainContainer .container_body table tr th:nth-child(1), .mainContainer .container_body table tr td:nth-child(1), .mainContainer .container_body .list_container tr th:nth-child(1), .mainContainer .container_body .list_container tr td:nth-child(1) {
+  text-align: right;
+}
+.mainContainer .container_body table tr th:nth-child(8), .mainContainer .container_body table tr th:nth-child(9), .mainContainer .container_body table tr td:nth-child(8), .mainContainer .container_body table tr td:nth-child(9), .mainContainer .container_body .list_container tr th:nth-child(8), .mainContainer .container_body .list_container tr th:nth-child(9), .mainContainer .container_body .list_container tr td:nth-child(8), .mainContainer .container_body .list_container tr td:nth-child(9) {
+  text-align: center;
+}
+.mainContainer .container_body table tr th, .mainContainer .container_body .list_container tr th {
+  padding: 0.8rem 0.5rem;
+  background: #1A1918;
+  color: #fff;
+  font-weight: bolder;
+}
+.mainContainer .container_body table tr td, .mainContainer .container_body .list_container tr td {
+  padding: 0.5rem;
+  background: #fff;
+  color: #1A1918;
+  font-weight: normal;
+}
+.mainContainer .container_body table ul, .mainContainer .container_body .list_container ul {
+  display: table-row;
+  background: #fff;
+  color: #1A1918;
+  padding: 0.6rem 0rem;
+  box-shadow: 0 0 10rem rgba(76, 61, 61, 0.15);
+  cursor: pointer;
+}
+.mainContainer .container_body table ul.list_title, .mainContainer .container_body .list_container ul.list_title {
+  background: #1A1918;
+  color: #fff;
+  padding: 0.8rem 0rem;
+}
+.mainContainer .container_body table ul li, .mainContainer .container_body .list_container ul li {
+  display: table-cell;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-align: left;
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mainContainer .container_body .search_bg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem;
+  background: #F5F6F6;
+  border-radius: 2rem;
+  box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+.mainContainer .container_body .search_bg .field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.mainContainer .container_body .search_bg .field label {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.mainContainer .container_body .search_bg .btn {
+  width: 16rem;
+  margin-top: 0;
+}
+.mainContainer .container_body .searchListBox {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+}
+.mainContainer .container_body .searchListBox .VehicleCard_list {
+  display: none;
+}
+.mainContainer .container_body .searchListBox .VehicleCard_list.active {
+  display: block;
+}
+.mainContainer .container_body:has(.searchListBox) {
+  display: block;
 }
 
-@media (max-width: 991px) {
+.radio-input {
+  display: none;
+}
+
+.label-radio {
+  cursor: pointer;
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.radio-button {
+  height: 1.6rem;
+  width: 1.6rem;
+  border: 0.1px solid #48B143;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.radio-button::after {
+  content: "";
+  display: block;
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #48B143;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.radio-input:checked ~ .label-radio .radio-button::after {
+  opacity: 1;
+}
+
+.graphTable {
+  display: block; /* fixes layout wonkiness in FF1.5 */
+  position: relative;
+  width: 60rem;
+  height: 30rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  background: transparent;
+  font-size: 1.1rem;
+}
+.graphTable tr, .graphTable td {
+  position: absolute;
+  bottom: 0;
+  width: 15rem;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.graphTable tr {
+  height: 29.6rem;
+  padding-top: 0.2rem;
+  border-top: 0.1rem dotted #C4C4C4;
+  color: #AAA;
+}
+
+#q-graph {
+  display: block; /* fixes layout wonkiness in FF1.5 */
+  position: relative;
+  width: 90%;
+  height: 30rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  background: transparent;
+  font-size: 1.1rem;
+  border-left: 0.1rem solid #6D6D6D;
+  border-bottom: 0.1rem solid #6D6D6D;
+}
+#q-graph tr, #q-graph th, #q-graph td {
+  position: absolute;
+  bottom: 0;
+  width: 15rem;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#q-graph #q1 {
+  left: 0;
+}
+#q-graph #q2 {
+  left: 8rem;
+}
+#q-graph #q3 {
+  left: 16rem;
+}
+#q-graph #q4 {
+  left: 24rem;
+}
+#q-graph #q5 {
+  left: 32rem;
+}
+#q-graph #q6 {
+  left: 40rem;
+}
+
+#q-graph thead tr {
+  left: 100%;
+  top: 50%;
+  bottom: auto;
+  margin: -2.5rem 0 0 5rem;
+}
+#q-graph thead th {
+  width: 7.5rem;
+  height: auto;
+  padding: 0.5rem 1rem;
+}
+#q-graph thead th {
+  bottom: -2rem;
+  vertical-align: top;
+}
+
+.btn_prev, .btn_next {
+  position: absolute;
+  bottom: 50%;
+  padding: 0 1rem;
+  height: 4rem;
+  background: #F5F6F6;
+  transition: 0.1s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.btn_prev:hover, .btn_next:hover {
+  background: #48B143;
+  color: #fff;
+}
+
+.btn_prev {
+  left: 0;
+  border-radius: 0 2rem 2rem 0;
+}
+
+.btn_next {
+  right: 0;
+  border-radius: 2rem 0 0 2rem;
+}
+
+#ticks {
+  position: relative;
+  top: -29rem;
+  left: 0;
+  width: 90%;
+  height: 30rem;
+  z-index: 1;
+  margin-bottom: -29rem;
+  font-size: 1rem;
+}
+#ticks #checkOut_car_icon {
+  position: relative;
+  top: 6.5rem;
+  left: 22rem;
+  width: 3rem;
+  height: 3rem;
+  border: 0.1rem solid #1A1918;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+#ticks #checkOut_car_icon .value {
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+#ticks .tick {
+  position: relative;
+  border-top: 0.1rem dotted #C4C4C4;
+  width: 100%;
+  height: 5rem;
+}
+#ticks .tick p {
+  position: absolute;
+  left: -3rem;
+  top: -1rem;
+  margin: 0 0 0 0.5rem;
+}
+
+@media (max-width: 1024px) {
   html {
     font-size: 55%;
   }
   .loader-page, .loginContainer, .mainContainer {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
   }
   .loginContainer .logo {
     width: 22rem;
+  }
+  .mainContainer .container_body .card_container .dash_card {
+    flex-basis: calc(33% - 1.2rem);
+  }
+  #q-graph tr, #q-graph th, #q-graph td {
+    width: 8rem;
+  }
+  .button-box {
+    width: 80%;
   }
 }
 @media (max-width: 768px) {
@@ -741,6 +1425,34 @@ html {
     order: 1;
     margin: 0 0.8rem;
   }
+  .mainContainer .container_body .card_container .dash_card {
+    flex-basis: calc(50% - 1.2rem);
+  }
+  .mainContainer .main-popup {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+  .mainContainer .main-popup .containt {
+    height: calc(100vh - 8rem);
+    border-radius: 0;
+  }
+  .mainContainer .main-popup .containt .btn_prev, .mainContainer .main-popup .containt .btn_next {
+    bottom: 2rem;
+  }
+  .mainContainer .main-popup .containt .companyLogo {
+    margin-right: 5rem;
+  }
+  .mainContainer .main-popup .containt .primery-detail {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .mainContainer .main-popup .containt .primery-detail ul {
+    width: 80%;
+  }
 }
 @media (max-width: 460px) {
   .loginContainer .logo, .loginContainer .loginBox {
@@ -754,6 +1466,44 @@ html {
   }
   .mainContainer .top-points li:nth-child(3) {
     left: calc(34% - 6rem);
+  }
+  .mainContainer .container_body .card_container .dash_card {
+    flex-basis: calc(100% - 1.2rem);
+  }
+  .mainContainer .main-popup .containt .companyLogo {
+    margin-right: 1rem;
+    align-items: self-end;
+  }
+  .mainContainer .main-popup .containt .gray-field {
+    min-width: 400px;
+  }
+  .mainContainer .main-popup .containt .gray-field .field {
+    justify-content: center;
+    width: 30rem;
+  }
+  .mainContainer .main-popup .containt .gray-field .field .scaner-img {
+    top: 3.6rem;
+  }
+  .mainContainer .main-popup .containt .gray-field .field .scaner-img1 {
+    top: 2.6rem;
+  }
+  .mainContainer .main-popup .containt .gray-field label {
+    width: 30rem;
+  }
+  .mainContainer .main-popup .containt .gray-field #q-graph #q2 {
+    left: 6rem;
+  }
+  .mainContainer .main-popup .containt .gray-field #q-graph #q3 {
+    left: 12rem;
+  }
+  .mainContainer .main-popup .containt .gray-field #q-graph #q4 {
+    left: 18rem;
+  }
+  .mainContainer .main-popup .containt .gray-field #q-graph #q5 {
+    left: 24rem;
+  }
+  .mainContainer .main-popup .containt .gray-field #q-graph #q6 {
+    left: 30rem;
   }
 }
 @media (max-width: 420px) {

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gate Controller App : Dashboard</title>
+    <link rel="stylesheet" href="scss/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+    <div class="mainContainer">
+        <header>
+            <div class="topLeft">
+                <div class="bars"><span></span><span></span><span></span></div>
+                <div class="mainTitle"> 
+                    <img src="images/Dashboard-white.png" alt="">
+                    <span>Dashboard - 12-Oct-2020 </span>
+                </div>
+            </div>
+            <div class="search">
+                <div class="allModel">
+                    All Model <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <ul class="model-list">
+                    <li><a href="Walk_InSearchVehicle.html">
+                        <div class="model-img"><img src="images/front-left-side-47.jpg" alt=""></div>
+                        <span>Skoda Slavia</span>
+                    </a></li>
+                    <li><a href="Walk_InSearchVehicle.html">
+                        <div class="model-img"><img src="images/front-left-side-46.jpg" alt=""></div>
+                        <span>Skoda Kushaq</span>
+                    </a></li>
+                    <li><a href="Walk_InSearchVehicle.html">
+                        <div class="model-img"><img src="images/front-left-side-45.jpg" alt=""></div>
+                        <span>Skoda Octavia</span>
+                    </a></li>
+                    <li><a href="Walk_InSearchVehicle.html">
+                        <div class="model-img"><img src="images/front-left-side-44.jpg" alt=""></div>
+                        <span>Skoda Superb</span>
+                    </a></li>
+                    <li><a href="Walk_InSearchVehicle.html">
+                        <div class="model-img"><img src="images/front-left-side-43.jpg" alt=""></div>
+                        <span>Skoda Kodiaq</span>
+                    </a></li>
+                    <li><a href="Walk_InSearchVehicle.html">
+                        <div class="model-img"><img src="images/front-left-side-42.jpg" alt=""></div>
+                        <span>Skoda Fabia</span>
+                    </a></li>
+                    <li><a href="Walk_InSearchVehicle.html">
+                        <div class="model-img"><img src="images/front-left-side-41.jpg" alt=""></div>
+                        <span>Skoda Enyaq iV</span>
+                    </a></li>
+                </ul>
+
+                <div class="search-field">
+                    <input type="text" placeholder="Search..">
+                    <button class="search-btn"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="skoda-logo">
+                    <img src="images/skoda-txtLogo.png" alt="">
+                </div>
+                <div class="notification">
+                    <img src="images/new-Notification.png" alt="">
+                </div>
+                <ul class="newNotifi">
+                    <li>
+                        <h5>Lorem ipsum, dolor sit amet consectetur</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus molestiae, fugiat ratione, rem ullam illum optio aperiam accusamus distinctio id ad reiciendis quas odio quaerat expedita. Quo odio sit excepturi?</p>
+                    </li>
+                    <li>
+                        <h5>Lorem ipsum, dolor sit amet consectetur</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus molestiae, fugiat ratione, rem ullam illum optio aperiam accusamus distinctio id ad reiciendis quas odio quaerat expedita. Quo odio sit excepturi?</p>
+                    </li>
+                    <li>
+                        <h5>Lorem ipsum, dolor sit amet consectetur</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus molestiae, fugiat ratione, rem ullam illum optio aperiam accusamus distinctio id ad reiciendis quas odio quaerat expedita. Quo odio sit excepturi?</p>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <nav class="navbar">
+            <div class="userDetail">
+                <div id="close" class="fas fa-times"></div>
+                <div class="ipAdd">IP : 192.168.01.2</div>
+                <h5>Krishna auto sales</h5>
+                <div class="userName">Amit Kumar <br>
+                    <span>Operations Supervisor</span>
+                </div>
+            </div>
+            <ul class="links">
+                <li><a href="Dashboard.html">DashBoard</a></li>
+                <li class="sub-links"><a href="#">Vehicle Check In</a>
+                    <ul>
+                        <li><a href="appointment.html">Appointment</a></li>
+                        <li><a href="Walk_In.html">Walk In</a></li>
+                        <li><a href="#">Road Test</a></li>
+                        <li><a href="#">Transfer</a></li>
+                    </ul>
+                </li>
+                <li class="sub-links"><a href="authorization.html">Gate Pass Verification</a>
+                    <ul>
+                        <li><a href="#">Appointment</a></li>
+                        <li><a href="#">Walk In</a></li>
+                        <li><a href="#">Road Test</a></li>
+                        <li><a href="#">Transfer</a></li>
+                    </ul>
+                </li>
+                <li class="sub-links"><a href="Check-OutVehicle.html">Vehicle Check Out</a>
+                    <ul>
+                        <li><a href="#">Appointment</a></li>
+                        <li><a href="#">Walk In</a></li>
+                        <li><a href="#">Road Test</a></li>
+                        <li><a href="#">Transfer</a></li>
+                    </ul>
+                </li>
+                <li class="sub-links"><a href="#">Vehicle Pick & Drop</a>
+                    <ul>
+                        <li><a href="#">Appointment</a></li>
+                        <li><a href="#">Walk In</a></li>
+                        <li><a href="#">Road Test</a></li>
+                        <li><a href="#">Transfer</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+            <div class="close"><i class="fa fas-times"></i></div>
+        </nav>
+
+
+        <!------Dashboard Card list Start------->
+        <div class="container_body">
+            <ul class="card_container">
+                <li class="dash_card">
+                    <a href="appointment.html">
+                        <p><img src="images/Appointments.png" alt=""> <span>Appointments</span> </p>
+                        <div class="graph"><img src="images/graph.png" alt=""></div>
+                        <div class="graph_Value">0</div>
+                    </a>
+                </li>
+                <li class="dash_card">
+                    <a href="#">
+                        <p><img src="images/Appointment-Check-In.png" alt=""> <span>Appointments Check-In</span> </p>
+                        <div class="graph"><img src="images/graph.png" alt=""></div>
+                        <div class="graph_Value">0</div>
+                    </a>    
+                </li>
+                <li class="dash_card">
+                    <a href="Walk_InSearchVehicle.html">
+                        <p><img src="images/Walk_In-white.png" alt=""> <span>Walk-In</span> </p>
+                        <div class="graph"><img src="images/graph.png" alt=""></div>
+                        <div class="graph_Value">0</div>
+                    </a>
+                </li>
+                <li class="dash_card">
+                    <a href="Check-OutVehicle.html">
+                        <p><img src="images/Appointments-check-out.png" alt=""> <span>Check-Out</span> </p>
+                        <div class="graph"><img src="images/graph.png" alt=""></div>
+                        <div class="graph_Value">0</div>
+                    </a>
+                </li>
+                <li class="dash_card">
+                    <a href="#">
+                        <p><img src="images/WIP.png" alt=""> <span>WIP</span> </p>
+                        <div class="graph"><img src="images/graph.png" alt=""></div>
+                        <div class="graph_Value">70</div>
+                    </a>
+                </li>
+                <li class="dash_card" id="CheckOut">
+                    <p><img src="images/Check-Out.png" alt=""> <span>Check-Out</span> </p>
+                    <div class="graph"><img src="images/graph.png" alt=""></div>
+                    <div class="graph_Value">7374</div>
+                </li>
+                <li class="dash_card">
+                    <a href="#">
+                        <p><img src="images/Workshop.png" alt=""> <span>Workshop</span> </p>
+                        <div class="graph"><img src="images/graph.png" alt=""></div>
+                        <div class="graph_Value">7441</div>
+                    </a>
+                </li>
+            </ul>            
+            
+            <table class="list_container">
+                <tr>
+                    <th>Sr.</th>
+                    <th>Model</th>
+                    <th>Customer</th>
+                    <th>KMS</th>
+                    <th>Repair Type</th>
+                    <th>Advisor</th>
+                    <th>Check-In</th>
+                    <th>RFD</th>
+                    <th>Check-Out</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>LAURA</td>
+                    <td>M/s Amar India Wo..</td>
+                    <td>0</td>
+                    <td>Accident Repairs </td>
+                    <td>Rakesh Man..</td>
+                    <td>10-Dec-2018  11:13:47 AM</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>KODIAQ</td>
+                    <td>M/s Frontier Polymers..</td>
+                    <td>0</td>
+                    <td>Accident Repairs </td>
+                    <td>Rakesh Man..</td>
+                    <td>10-Dec-2018  11:55:45 AM</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>FABIA</td>
+                    <td>Mrs. SANGEETA SHAR..</td>
+                    <td>0</td>
+                    <td>Accident Repairs </td>
+                    <td>Rakesh Man..</td>
+                    <td>15-Jan-2019  05:06:32 PM</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>LAURA</td>
+                    <td>M/s Amar India Wo..</td>
+                    <td>0</td>
+                    <td>Accident Repairs </td>
+                    <td>Rakesh Man..</td>
+                    <td>10-Dec-2018  11:13:47 AM</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>LAURA</td>
+                    <td>M/s Amar India Wo..</td>
+                    <td>0</td>
+                    <td>Accident Repairs </td>
+                    <td>Rakesh Man..</td>
+                    <td>10-Dec-2018  11:13:47 AM</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>LAURA</td>
+                    <td>M/s Amar India Wo..</td>
+                    <td>0</td>
+                    <td>Accident Repairs </td>
+                    <td>Rakesh Man..</td>
+                    <td>10-Dec-2018  11:13:47 AM</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>LAURA</td>
+                    <td>M/s Amar India Wo..</td>
+                    <td>0</td>
+                    <td>Accident Repairs </td>
+                    <td>Rakesh Man..</td>
+                    <td>10-Dec-2018  11:13:47 AM</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>LAURA</td>
+                    <td>M/s Amar India Wo..</td>
+                    <td>0</td>
+                    <td>Accident Repairs </td>
+                    <td>Rakesh Man..</td>
+                    <td>10-Dec-2018  11:13:47 AM</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>LAURA</td>
+                    <td>M/s Amar India Wo..</td>
+                    <td>0</td>
+                    <td>Accident Repairs </td>
+                    <td>Rakesh Man..</td>
+                    <td>10-Dec-2018  11:13:47 AM</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>LAURA</td>
+                    <td>M/s Amar India Wo..</td>
+                    <td>0</td>
+                    <td>Accident Repairs </td>
+                    <td>Rakesh Man..</td>
+                    <td>10-Dec-2018  11:13:47 AM</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>LAURA</td>
+                    <td>M/s Amar India Wo..</td>
+                    <td>0</td>
+                    <td>Accident Repairs </td>
+                    <td>Rakesh Man..</td>
+                    <td>10-Dec-2018  11:13:47 AM</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>LAURA</td>
+                    <td>M/s Amar India Wo..</td>
+                    <td>0</td>
+                    <td>Accident Repairs </td>
+                    <td>Rakesh Man..</td>
+                    <td>10-Dec-2018  11:13:47 AM</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>LAURA</td>
+                    <td>M/s Amar India Wo..</td>
+                    <td>0</td>
+                    <td>Accident Repairs </td>
+                    <td>Rakesh Man..</td>
+                    <td>10-Dec-2018  11:13:47 AM</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>LAURA</td>
+                    <td>M/s Amar India Wo..</td>
+                    <td>0</td>
+                    <td>Accident Repairs </td>
+                    <td>Rakesh Man..</td>
+                    <td>10-Dec-2018  11:13:47 AM</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>LAURA</td>
+                    <td>M/s Amar India Wo..</td>
+                    <td>0</td>
+                    <td>Accident Repairs </td>
+                    <td>Rakesh Man..</td>
+                    <td>10-Dec-2018  11:13:47 AM</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>LAURA</td>
+                    <td>M/s Amar India Wo..</td>
+                    <td>0</td>
+                    <td>Accident Repairs </td>
+                    <td>Rakesh Man..</td>
+                    <td>10-Dec-2018  11:13:47 AM</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>LAURA</td>
+                    <td>M/s Amar India Wo..</td>
+                    <td>0</td>
+                    <td>Accident Repairs </td>
+                    <td>Rakesh Man..</td>
+                    <td>10-Dec-2018  11:13:47 AM</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </div>
+
+        <!----------------- Error Page to Click Search ----------------->
+        <div class="error-container">
+            <img src="images/error.png" alt="">
+            <h2>Uh oh!</h2>
+            <p>Something went wrong.</p>
+    
+            <div class="button-box">
+                <button class="btn-line">CANCEL</button>
+                <button class="btn">Retry</button>
+            </div>
+        </div>
+
+        <!----------------- Popup Page to Click Cards ----------------->
+        <div class="main-popup">
+            <div class="close"><i class="fas fa-times"></i></div>
+            <h2 class="popup-titel"><img src="images/Check-Out Vehicle-white.png" alt=""> Check-Out Confirmed - Sep 2020</h2>
+            <div class="companyLogo"><img src="images/skoda-txtLogo.png" alt=""></div>
+
+            <div class="containt">
+                <div class="gray-field">
+                    <table id="q-graph">
+                        <tbody>
+                            <tr class="qtr" id="q1">
+                                <th scope="row">09 Sep</th>
+                            </tr>
+                            <tr class="qtr" id="q2">
+                                <th scope="row">10 Sep</th>
+                            </tr>
+                            <tr class="qtr" id="q3">
+                                <th scope="row">11 Sep</th>
+                            </tr>
+                            <tr class="qtr" id="q4">
+                                <th scope="row">12 Sep</th>
+                            </tr>
+                            <tr class="qtr" id="q5">
+                                <th scope="row">13 Sep</th>
+                            </tr>
+                            <tr class="qtr" id="q6">
+                                <th scope="row">14 Sep</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                        
+                        <div id="ticks">
+                            <div id="checkOut_car_icon">
+                                <img src="images/car.png" alt="">
+                                <div class="value">4</div>
+                            </div>
+                        <div class="tick"><p>05</p></div>
+                        <div class="tick"><p>04</p></div>
+                        <div class="tick"><p>03</p></div>
+                        <div class="tick"><p>02</p></div>
+                        <div class="tick"><p>01</p></div>
+                        </div>
+                    <!-- <canvas id="myChart" style="width:100%;max-width:700px"></canvas> -->
+                </div>
+                <button class="btn_prev" onclick="window.location.href = '#';"><i class="fa-solid fa-angle-left"></i> Prev</button>
+                <button class="btn_next" onclick="window.location.href = '#';">Next <i class="fa-solid fa-angle-right"></i></button>
+
+            </div>
+            
+        </div>
+        
+
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

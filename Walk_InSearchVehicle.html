@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gate Controller App : Walk In - Search Vehicle</title>
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+<body>
+    <div class="mainContainer">
+        <header>
+            <div class="topLeft">
+                <div class="bars"><span></span><span></span><span></span></div>
+                <div class="mainTitle"> 
+                    <img src="images/Walk_In-white.png" alt="">
+                    <span>Walk In</span>
+                </div>
+            </div>
+            <div class="search">
+                <div class="allModel">
+                    All Model <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <ul class="model-list">
+                    <li><a href="Walk_InSearchVehicle.html">
+                        <div class="model-img"><img src="images/front-left-side-47.jpg" alt=""></div>
+                        <span>Skoda Slavia</span>
+                    </a></li>
+                    <li><a href="Walk_InSearchVehicle.html">
+                        <div class="model-img"><img src="images/front-left-side-46.jpg" alt=""></div>
+                        <span>Skoda Kushaq</span>
+                    </a></li>
+                    <li><a href="Walk_InSearchVehicle.html">
+                        <div class="model-img"><img src="images/front-left-side-45.jpg" alt=""></div>
+                        <span>Skoda Octavia</span>
+                    </a></li>
+                    <li><a href="Walk_InSearchVehicle.html">
+                        <div class="model-img"><img src="images/front-left-side-44.jpg" alt=""></div>
+                        <span>Skoda Superb</span>
+                    </a></li>
+                    <li><a href="Walk_InSearchVehicle.html">
+                        <div class="model-img"><img src="images/front-left-side-43.jpg" alt=""></div>
+                        <span>Skoda Kodiaq</span>
+                    </a></li>
+                    <li><a href="Walk_InSearchVehicle.html">
+                        <div class="model-img"><img src="images/front-left-side-42.jpg" alt=""></div>
+                        <span>Skoda Fabia</span>
+                    </a></li>
+                    <li><a href="Walk_InSearchVehicle.html">
+                        <div class="model-img"><img src="images/front-left-side-41.jpg" alt=""></div>
+                        <span>Skoda Enyaq iV</span>
+                    </a></li>
+                </ul>
+
+                <div class="search-field">
+                    <input type="text" placeholder="Search..">
+                    <button class="search-btn"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="skoda-logo">
+                    <img src="images/skoda-txtLogo.png" alt="">
+                </div>
+                <div class="notification">
+                    <img src="images/new-Notification.png" alt="">
+                </div>
+                <ul class="newNotifi">
+                    <li>
+                        <h5>Lorem ipsum, dolor sit amet consectetur</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus molestiae, fugiat ratione, rem ullam illum optio aperiam accusamus distinctio id ad reiciendis quas odio quaerat expedita. Quo odio sit excepturi?</p>
+                    </li>
+                    <li>
+                        <h5>Lorem ipsum, dolor sit amet consectetur</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus molestiae, fugiat ratione, rem ullam illum optio aperiam accusamus distinctio id ad reiciendis quas odio quaerat expedita. Quo odio sit excepturi?</p>
+                    </li>
+                    <li>
+                        <h5>Lorem ipsum, dolor sit amet consectetur</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus molestiae, fugiat ratione, rem ullam illum optio aperiam accusamus distinctio id ad reiciendis quas odio quaerat expedita. Quo odio sit excepturi?</p>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <nav class="navbar">
+            <div class="userDetail">
+                <div id="close" class="fas fa-times"></div>
+                <div class="ipAdd">IP : 192.168.01.2</div>
+                <h5>Krishna auto sales</h5>
+                <div class="userName">Amit Kumar <br>
+                    <span>Operations Supervisor</span>
+                </div>
+            </div>
+            <ul class="links">
+                <li><a href="Dashboard.html">DashBoard</a></li>
+                <li class="sub-links"><a href="#">Vehicle Check In</a>
+                    <ul>
+                        <li><a href="appointment.html">Appointment</a></li>
+                        <li><a href="Walk_In.html">Walk In</a></li>
+                        <li><a href="#">Road Test</a></li>
+                        <li><a href="#">Transfer</a></li>
+                    </ul>
+                </li>
+                <li class="sub-links"><a href="authorization.html">Gate Pass Verification</a>
+                    <ul>
+                        <li><a href="#">Appointment</a></li>
+                        <li><a href="#">Walk In</a></li>
+                        <li><a href="#">Road Test</a></li>
+                        <li><a href="#">Transfer</a></li>
+                    </ul>
+                </li>
+                <li class="sub-links"><a href="Check-OutVehicle.html">Vehicle Check Out</a>
+                    <ul>
+                        <li><a href="#">Appointment</a></li>
+                        <li><a href="#">Walk In</a></li>
+                        <li><a href="#">Road Test</a></li>
+                        <li><a href="#">Transfer</a></li>
+                    </ul>
+                </li>
+                <li class="sub-links"><a href="#">Vehicle Pick & Drop</a>
+                    <ul>
+                        <li><a href="#">Appointment</a></li>
+                        <li><a href="#">Walk In</a></li>
+                        <li><a href="#">Road Test</a></li>
+                        <li><a href="#">Transfer</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+
+        <!------Check-Out Vehicle Start------->
+        <div class="container_body">
+            <div class="search_bg">
+                <div class="field">
+                    <input type="radio" name="size" id="VIN" checked class="radio-input">
+                    <label class="label-radio" for="VIN">
+                      <span class="radio-button"></span> VIN
+                    </label>
+                </div>
+                <div class="field">
+                    <input type="radio" name="size" id="Engine_Number" class="radio-input">
+                    <label class="label-radio" for="Engine_Number">
+                      <span class="radio-button"></span> Engine Number
+                    </label>
+                </div>
+                <div class="field">
+                    <input type="radio" name="size" id="Registration" class="radio-input">
+                    <label class="label-radio" for="Registration">
+                      <span class="radio-button"></span> Registration
+                    </label>
+                </div>
+                <div class="field">
+                    <input type="text" class="inputText" placeholder="Click Icon to Scan Dangler" value="TMBBLDNP4HA300286"/>
+                    <span class="scaner-img"><img src="images/bar-code2.png" alt=""></span>                
+                </div>
+                <button class="btn">Find</button>
+            </div>
+            <div class="searchListBox">
+                <ul class="VehicleCard_list">
+                    <li class="card">
+                        <h3>Mr. Abhishek Kumar <span><i class="fas fa-star"></i></span></h3>
+                        <div class="card-content">
+                            <div class="img-box">
+                                <img src="images/Image-1.png" alt="">
+                                <p>RAPID</p>
+                            </div>
+                            <div class="text-box">
+                                <p>12-Sep-2020</p>
+                                <p><span>Registration</span><br>
+                                    OR02BW-5188
+                                </p>
+                                <p><span>Repair Type</span> <br>
+                                -</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+
+        <!----------------- Error Page to Click Search ----------------->
+        <div class="error-container">
+            <img src="images/error.png" alt="">
+            <h2>Uh oh!</h2>
+            <p>Something went wrong.</p>
+    
+            <div class="button-box">
+                <button class="btn-line">CANCEL</button>
+                <button class="btn">Retry</button>
+            </div>
+        </div>
+
+        <!----------------- Popup Page to Click Cards ----------------->
+        <div class="main-popup">
+            <div class="close"><i class="fas fa-times"></i></div>
+            <h2 class="popup-titel"><img src="images/Authorization Check-out-white.png" alt=""> Authorization for Check-out of Vehicle</h2>
+
+            <div class="containt">
+                <div class="primery-detail">
+                    <ul>
+                        <li>
+                            <ul>
+                                <li>Customer</li>
+                                <li>Mrs. Gayatri Palat</li>
+                            </ul>
+                            <ul>
+                                <li>VIN</li>
+                                <li>TMBBDANA5EG010008</li>
+                            </ul>
+                        </li>             
+                    </ul>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li>Registration</li>
+                                <li>AP13AG-1441</li>
+                            </ul>
+                            <ul>
+                                <li>Appointment Time</li>
+                                <li>04-Jan-2019 8:58:42 AM</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gray-field">
+                    <div class="field">
+                        <label for="Odometer">Odometer</label>
+                        <input type="text" class="inputText" placeholder="" value="19838"/>
+                    </div>
+                    <div class="field deactive">
+                        <label for="Walk_Reason">Walk in Reason</label>
+                        <select id="Walk_Reason" class="inputText" name="Reasonlist" disabled form="Reasonform">
+                          <option value="Select Walk in Reason">Select Walk in Reason</option>
+                          <option value="Accidental case">Accidental case</option>
+                          <option value="">Accidental case</option>
+                          <option value="">Accidental case</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="Scan_Dangler">Scan Dangler</label>
+                        <input type="text" class="inputText" disabled placeholder="Click Icon to Scan Dangler" value="-"/>
+                        <span class="scaner-img"><img src="images/bar-code1.png" alt=""></span>
+                        <span class="alert-info">Feature not available.</span>
+                    </div>
+                    <hr/>
+                    <div class="brouse-img-list">
+                        <div class="box-img">
+                            <img src="images/Image.png" alt="">
+                        </div>
+                        <div class="box-img">
+                            <div class="img-store">
+                                <img src="images/img1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="box-img">
+                            <div class="img-store">
+                                <img src="images/img2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="box-img">
+                            <div class="img-store">
+                                <img src="images/img3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="box-img">
+                            <div class="img-store">
+                                <img src="images/img4.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <p>Feature not available.</p>
+                </div>
+    
+                <div class="button-box">
+                    <button class="btn-line" onclick="window.location.href = '#';">CANCEL</button>
+                    <button class="btn" onclick="window.location.href = '#';">check-In</button>
+                </div>
+
+            </div>
+            
+        </div>
+        
+
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
